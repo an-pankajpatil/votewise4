@@ -1,0 +1,55 @@
+<head>
+<title>Voter Creation</title>
+<!-- This next line keeps buttons and forms at a legible size on cell phones -->
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+</head>
+<!-- <div>
+<img class="votewise" src="assets/images/votewiselogo.svg"/></div>
+
+    <div> -->
+<div class="voter-signup">
+
+
+<p align = left>
+In order to match you with your local politicians, we need to know where you live. </p>
+
+<form>
+Zip Code:<br>
+<input ng-model="user.zip" type="number" name="zip"> <br>
+<input ng-click="findByZip( user )" type="submit">
+<div class={{zipClicked}}>
+  <br>County: {{county}}<br>
+  <!-- <select ng-model="user.county">
+    <option ng-repeat="county in counties">{{county}}</option>
+  </select> -->
+  <!-- <input  ng-model="user.county" type="text" name="county" value="haaaaaay"> -->
+  <br>City:<br>
+  <select ng-model="user.city">
+    <option ng-repeat="city in cities">{{city}}</option>
+  </select>
+  <br>Street Address:<br>
+  <input ng-model="user.address" type="text" name="address">
+  <br>
+  <br>User name: {{usernameMessage}}<br>
+
+  <input  ng-model="user.username" type="text" name="userName"><br>
+  User password: {{passwordMessage}}<br>
+  <input  ng-model="user.password" type="password" name="psw"> <br>
+  Confirm password:<br>
+  <input type="password" name="pswc">
+  <br>
+    E-mail: {{emailMessage}}<br>
+    <input  ng-model="user.email" type="email" name="email" />
+  </form>
+
+  <p>
+    {{errorMessages}}
+  </p>
+
+  </form>
+    <br><br>
+    <input ng-click="signUp( user )" type="submit">
+  </form>
+</div>
+</div>
+</div>

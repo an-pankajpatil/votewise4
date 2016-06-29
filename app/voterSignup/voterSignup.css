@@ -1,0 +1,35 @@
+
+img {
+   width: 24%;
+   min-width: 150px;
+   max-width: 300px;
+}
+
+ a img:hover {
+   transform:scale(1.1);
+ }
+
+ a img:active {
+   transform:scale(1.5);
+ }
+
+.votewise {
+  align:center;
+}
+
+.votewise {
+  width:100%; max-width:600px;
+}
+
+.log-in {
+  text-align: center;
+}
+
+.wrapper{
+  text-align: center;
+}
+
+.voter-signup {
+  margin-top: 5%;
+
+}

@@ -1,0 +1,35 @@
+.view1-body {
+  background-color: #ccccff;
+  padding: 1%;
+}
+
+.choice {
+   width: 24%;
+   min-width: 150px;
+   max-width: 300px;
+}
+ .choice:hover {
+ transform:scale(1.1);
+}
+ .choice:active {
+   transform:scale(1.5);
+ }
+.votewise-logo {
+  align:center;
+  width:100%;
+  max-width:600px;
+  align-self: center;
+  order: 1;
+}
+
+.log-in {
+  text-align: center;
+  font-size: 1.5 em;
+}
+.wrapper{
+  text-align: center;
+ }
+
+/*p {
+  font-size: 1.5 em;
+}*/
