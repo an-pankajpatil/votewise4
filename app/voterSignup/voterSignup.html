@@ -16,27 +16,30 @@ In order to match you with your local politicians, we need to know where you liv
 <form>
 Zip Code:<br>
 <input ng-model="user.zip" type="number" name="zip"> <br>
-<input ng-click="findByZip( user )" type="submit">
+<button ng-click="findByZip( user )">Submit</button>
 <div class={{zipClicked}}>
-  <br>County: {{county}}<br>
-  <!-- <select ng-model="user.county">
-    <option ng-repeat="county in counties">{{county}}</option>
-  </select> -->
-  <!-- <input  ng-model="user.county" type="text" name="county" value="haaaaaay"> -->
+  <br>County:<br>
+  <br/>{{counties}} <br>
+  <br />
+   Not your county? <input ng-model="user.county" type="text" name="county">
+   <br />
   <br>City:<br>
   <select ng-model="user.city">
     <option ng-repeat="city in cities">{{city}}</option>
   </select>
+  <br />
+  <br />
+   City not listed? <input ng-model="user.city" type="text" name="city">
+   <br />
   <br>Street Address:<br>
   <input ng-model="user.address" type="text" name="address">
   <br>
-  <br>User name: {{usernameMessage}}<br>
+  <br>Username: {{usernameMessage}}<br>
 
   <input  ng-model="user.username" type="text" name="userName"><br>
-  User password: {{passwordMessage}}<br>
+  Password: {{passwordMessage}}<br>
   <input  ng-model="user.password" type="password" name="psw"> <br>
-  Confirm password:<br>
-  <input type="password" name="pswc">
+
   <br>
     E-mail: {{emailMessage}}<br>
     <input  ng-model="user.email" type="email" name="email" />
@@ -47,8 +50,9 @@ Zip Code:<br>
   </p>
 
   </form>
+    <input type="checkbox"/>Is all this information correct?
     <br><br>
-    <input ng-click="signUp( user )" type="submit">
+    <button ng-click="signUp( user )" >Submit</button>
   </form>
 </div>
 </div>

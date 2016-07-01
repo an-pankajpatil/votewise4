@@ -14,7 +14,7 @@ angular.module('myApp.voterSignup', ['ngRoute'])
   $scope.passwordMessage = '';
   $scope.emailMessage = '';
   $scope.taken = true;
-  $scope.county = '';
+  $scope.counties = '';
   $scope.cities = [];
   $scope.zipClicked = "zip-not-clicked";
   const validate = apiCall.constants();
@@ -87,8 +87,9 @@ function validateEmail (email) {
 
 function validateInputs (username, email, password) {
   const validUsername = validateUsername(username);
-  const validEmail = apiCall.validateEmail(email, $scope);
+  const validEmail = validateEmail(email, $scope);
   const validPassword = validatePassword(password);
+
   if (validUsername && validEmail && validPassword) {
     return true;
   }
@@ -132,8 +133,7 @@ $scope.findByZip = ( user ) => {
   $http(
     request
   ).then(function success(response) {
-    console.log(response.data.zip);
-    $scope.county = response.data.zip.county;
+    $scope.counties = response.data.zip.county;
     $scope.cities = response.data.zip.city;
     $scope.zipClicked = 'zip-clicked';
   }, function error(response) {
@@ -146,7 +146,7 @@ $scope.findByZip = ( user ) => {
     console.log(user);
     user.county = $scope.county;
     const validated = validateInputs (user.username, user.email, user.password);
-    usernameTaken(user.username);
+    usernameTaken(validated);
     if (user.username && user.password && user.zip && user.email && validated) {
       const data = {
            password: user.password,

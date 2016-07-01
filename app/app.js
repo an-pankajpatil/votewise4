@@ -42,7 +42,6 @@ mainApp.factory('apiService', function() {
   }
 
   factory.apiCall = (verb, url, data, headers) => {
-    console.log('made it');
     console.log(verb, url, data, headers);
     const root = 'http://localhost:8080';
     return {
@@ -69,7 +68,7 @@ mainApp.service('apiCall', function(apiService){
   this.constants = () => {
     return apiService.constants();
   }
-  this.validateEmail = (email, msg) => {
-    return apiService.validateEmail(email, msg);
-  }
+  // this.validateEmail = (email, msg) => {
+  //   return apiService.validateEmail(email, msg);
+  // }
 });
