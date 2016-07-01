@@ -5,9 +5,10 @@
 body {
   background-color: #ccccff;
 }
-
-
-
+a {
+  color: inherit;
+}
+ 
 .menu {
   list-style: none;
 

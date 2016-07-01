@@ -25,10 +25,21 @@ mainApp.config(['$locationProvider', '$routeProvider', function($locationProvide
 
 mainApp.factory('apiService', function() {
   const factory = {};
+  const tokenName = 'VoteWise:JWT';
 
-  factory.log = function() {
-    console.log('haaaay');
+  factory.saveToken = (token) => {
+    window.localStorage[tokenName] = token;
   }
+
+  factory.getToken = () => {
+    return window.localStorage[tokenName];
+  }
+
+  factory.destroyToken = () => {
+    window.localStorage.removeItem(tokenName);
+  }
+
+
 
   factory.constants = () => {
     return {
@@ -62,13 +73,21 @@ mainApp.factory('apiService', function() {
 });
 
 mainApp.service('apiCall', function(apiService){
+
   this.apiCall = (verb, url, data, headers) => {
     return apiService.apiCall(verb, url, data, headers);
   }
   this.constants = () => {
     return apiService.constants();
   }
-  // this.validateEmail = (email, msg) => {
-  //   return apiService.validateEmail(email, msg);
-  // }
+  this.saveToken = (token) => {
+    return apiService.saveToken(token);
+  }
+  this.getToken = () => {
+    return apiService.getToken();
+  }
+  this.destroyToken = () => {
+    return apiService.destroyToken();
+  }
+
 });

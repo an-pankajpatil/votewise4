@@ -160,7 +160,7 @@ $scope.findByZip = ( user ) => {
      $http(
        request
      ).then(function successCallback(response) {
-      $location.path('/welcomeView');
+      $location.path('/signin');
     }, function errorCallback(response) {
        var errorList = $scope.makeErrorList(response.data.error);
        if (errorList) {
