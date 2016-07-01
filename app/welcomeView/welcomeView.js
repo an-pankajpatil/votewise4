@@ -9,6 +9,10 @@ angular.module('myApp.welcomeView', ['ngRoute'])
   });
 }])
 
-.controller('welcomeCtrl', [function() {
-
+.controller('welcomeCtrl', ['$scope', 'apiCall', '$location', function($scope, apiCall, $location) {
+  // const returningUser = apiCall.getToken();
+  //
+  // if (returningUser) {
+  //   $location.path('/debateHome');
+  // }
 }]);

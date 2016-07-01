@@ -19,8 +19,16 @@ const mainApp = angular.module('myApp', [
 
 mainApp.config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
+  function checkUser() {
+    const token = window.localStorage['VoteWise:JWT'];
+    if (token) {
+      return $routeProvider.otherwise({redirectTo: '/debateHome'});
+    }
 
-  $routeProvider.otherwise({redirectTo: '/welcome'});
+    return $routeProvider.otherwise({redirectTo: '/welcome'});
+  }
+  checkUser();
+
 }]);
 
 mainApp.factory('apiService', function() {
