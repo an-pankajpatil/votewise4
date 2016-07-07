@@ -1,0 +1,371 @@
+<html>
+<head>
+<title>Voter Polls</title>
+<!-- This next line keeps buttons and forms at a legible size on cell phones -->
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+</head>
+<div>
+
+<style type="text/css">
+body{background-color: #ccccff}
+
+ .top-buttons {width: 10%;
+   min-width: 30px;
+   max-width: 300px;}
+ a img:hover {transform:scale(1.1);}
+ a img:active {transform:scale(1.5);}
+.votewise {width:20%; max-width:600px;}
+.voter {width: 10%;
+   min-width: 30px;
+   max-width: 300px;}
+.local{
+    display:inline-block; 
+    position:relative; 
+    width:41%; max-width:300px; 
+    min-width:30px; padding: 2% }
+.subjects {
+    display:inline-block;
+    position:relative;
+    width:32%; max-width:200px;
+   }
+.button_badge {/*This badge is for displaying the number of threads*/
+  background: #d00303;
+  border-radius:30%;
+  color: white;
+  padding: 1px 3px;
+  font-size: 5vmin ;
+  position: absolute; /* Position the badge within the relatively positioned button */
+  top: 0;
+  right: 20%;
+}
+.no_thread_badge{/*This badge is for if there are no threads*/
+  background-color: #3cc722;
+  border-radius:30px;
+  color: white;
+  padding: 1px 3px;
+  font-size: 3vmin;
+  position: absolute; /* Position the badge within the relatively positioned button */
+  top: 0;
+  right: 0;
+}
+.checkboxes {padding-left:10px}
+span:before{
+    content:" "; 
+    display:inline-block; 
+    width:7px;
+}
+    .secondVoterSet {display:none;}
+    .thirdVoterSet {display:none;}
+    </style>
+<body>
+
+
+    
+                    <!-- This is the header -->
+<a href="index.html"><img class="votewise" src="images/votewiseTop.svg" alt="About Us"/></a>
+<a href="questionHome.html"><img class=top-buttons src="images/questionMarkB.svg" alt="Questions"/></a>
+<a href="Learn_Home.html"><img class=top-buttons src="images/learn.svg" alt="Learn Home"/></a>
+<a href="Debate_Home.html"><img class=top-buttons src="images/chat.svg" alt="Debate Home"/></a>
+<a href="votersList.html"><img class=voter src="images/VOTERbutton.svg" alt="Voters"/></a>
+<a href="politiciansList.html"><img class=top-buttons src="images/politicianB.svg" alt="Politicians"/></a>
+<a href="Advocate_Home.html"><img class=top-buttons src="images/advocateB.svg" alt="Advocates"/></a>
+<a href="PressHome.html"><img class=top-buttons src="images/pressB.svg" alt="Press"/></a>
+<hr size="5" noshade>
+                <!-- This is the end of the header -->
+
+    
+    
+    
+    
+<p><h1><center>POLLING DATA</center></h1></p>
+    
+
+
+<p>Engage in debates and come up with solutions to problems in the subjects you care about.</p>
+
+<form action=""><fieldset>
+    <legend>VOTER TYPE ONE</legend>
+    <input type="checkbox" name="selectAll-Voter1" value="SelectAll" checked /> Select All
+<fieldset>
+        <legend>ID CONFIRMATION TYPE</legend>
+        <input type="checkbox" name="idType" value="all" checked /> All
+         <span></span>
+        <input type="checkbox" name="idType" value="email" checked /> Email
+         <span></span>
+        <input type="checkbox" name="idType" value="Facebook" checked />Facebook
+         <span></span>
+        <input type="checkbox" name="idType" value="cellPhone" checked /> Cell Phone Number Call Back
+        <span></span>
+        <input type="checkbox" name="idType" value="Other" checked /> Other
+        <br> 
+        </fieldset>
+    <br>    <fieldset>
+        <legend>PARTY</legend>
+        <input type="checkbox" name="party" value="all" checked /> All
+         <span></span>
+        <input type="checkbox" name="party" value="Democrat" checked /> Democrat
+         <span></span>
+        <input type="checkbox" name="party" value="Republican" checked />Republican
+         <span></span>
+        <input type="checkbox" name="party" value="Libertarian" checked /> Libertarian
+        <span></span>
+        <input type="checkbox" name="party" value="Green" checked /> Green
+         <span></span>
+        <input type="checkbox" name="party" value="Constitution" checked /> Constitution
+         <span></span>
+        <input type="checkbox" name="party" value="Other" checked /> Other
+        <br> 
+        </fieldset>
+    <br>
+     <fieldset>
+        <legend>GENDER</legend>
+        <input type="checkbox" name="sex" value="all" checked /> All
+         <span></span>
+        <input type="checkbox" name="sex" value="Male" checked /> Male
+          <span></span>
+        <input type="checkbox" name="sex" value="Female" checked /> Female
+         <span></span>
+        <input type="checkbox" name="sex" value="Other" checked /> Other
+        <br>
+        </fieldset> <br>
+     <fieldset>
+        <legend>LGBT</legend>
+        <input type="checkbox" name="LGBT" value="all" checked /> All
+         <span></span>
+        <input type="checkbox" name="lGBT" value="yes" checked />Yes
+          <span></span>
+        <input type="checkbox" name="lGBT" value="no" checked />No
+          <span></span>
+        <br>
+        </fieldset> <br>
+<fieldset>
+        <legend>ETHNIC IDENTITY</legend>
+        <input type="checkbox" name="ethnicity" value="all" checked /> All
+         <span></span>
+        <input type="checkbox" name="ethnicity" value="white" checked />White
+          <span></span>
+        <input type="checkbox" name="ethnicity" value="africanAmerican" checked />African American
+        <span></span>
+        <input type="checkbox" name="ethnicity" value="hispanic" checked />Hispanic/Latino
+        <span></span>
+        <input type="checkbox" name="ethnicity" value="asian" checked />Asian
+          <span></span>
+        <input type="checkbox" name="ethnicity" value="nativeAmerican" checked />Native American
+         <span></span>        
+        <input type="checkbox" name="ethnicity" value="other" checked />Other
+         <span></span>
+        <br>
+        </fieldset> <br>
+    
+     <fieldset>
+        <legend>AGE</legend>
+        <input type="checkbox" name="age" value="all" checked /> All
+         <span></span>
+        <input type="checkbox" name="age" value="under18" checked /> Under 18
+          <span></span>
+        <input type="checkbox" name="age" value="18-25" checked />18-25
+          <span></span>
+        <input type="checkbox" name="age" value="26-30" checked /> 26-30
+          <span></span>
+        <input type="checkbox" name="age" value="31-35" checked /> 31-35
+          <span></span>
+        <input type="checkbox" name="age" value="36-40" checked /> 36-40
+         <span></span>
+        <input type="checkbox" name="age" value="41-45" checked />41-45
+          <span></span>
+        <input type="checkbox" name="age" value="46-50" checked />46-50
+          <span></span>
+        <input type="checkbox" name="age" value="51-55" checked />51-55
+          <span></span>
+        <input type="checkbox" name="age" value="56-60" checked />56-60
+          <span></span>
+        <input type="checkbox" name="age" value="61-65" checked />61-65
+          <span></span>
+        <input type="checkbox" name="age" value="65-70" checked />65-70
+          <span></span>
+        <input type="checkbox" name="age" value="71-75" checked />71-75
+          <span></span>
+        <input type="checkbox" name="age" value="75-80" checked />75-80
+          <span></span>
+         <input type="checkbox" name="age" value="over80" checked />Over 81
+        <br>
+        </fieldset> 
+    <br>
+<fieldset>
+        <legend>EDUCATION</legend>
+        <input type="checkbox" name="occupation" value="didNotCompleteHighSchoolOrGed" checked/>Did not complete high school or GED        <span></span>
+        <input type="checkbox" name="occupation" value="completedHighSchoolOrGed" checked/>Completed high school or GED        <span></span>
+        <input type="checkbox" name="occupation" value="completedTwoYearsOfProfessionalTraining" checked/>Completed two years of professional training        <br>
+        <input type="checkbox" name="occupation" value="completedAnAssociatesDegree" checked/>Completed an associates degree        <span></span>
+        <input type="checkbox" name="occupation" value="completedABachelorsDegree" checked/>Completed a bachelors degree        <span></span>
+        <input type="checkbox" name="occupation" value="completedAnApprenticeshipOf4YearsOrMore" checked/>Completed an apprenticeship of 4 years or more        <br>
+        <input type="checkbox" name="occupation" value="completedAMastersDegree" checked/>Completed a masters degree        <span></span>
+        <input type="checkbox" name="occupation" value="completedADoctorateDegree" checked/>Completed a doctorate degree        <span></span>
+    
+    </fieldset> <br>
+    <fieldset>
+        <legend>WORK STATUS</legend>
+        <input type="checkbox" name="occupation" value="fullTime" checked/>Full Time        <span></span>
+        <input type="checkbox" name="occupation" value="partTime" checked/> Part Time        <span></span>
+        <input type="checkbox" name="occupation" value="unemployed" checked/> Unemployed        <span></span>
+        <input type="checkbox" name="occupation" value="underemployed" checked/> Underemployed        <span></span>
+        <input type="checkbox" name="occupation" value="retired" checked/> Retired        <br>
+        <input type="checkbox" name="occupation" value="student" checked/> Student        <span></span>
+        <input type="checkbox" name="occupation" value="disabled" checked/> Disabled        <span></span>
+        <input type="checkbox" name="occupation" value="self-Employed" checked/> Self-Employed        <span></span>
+        <input type="checkbox" name="occupation" value="homemaker" checked/> Homemaker        <span></span>
+        <input type="checkbox" name="occupation" value="other" checked/> Other        <span></span>
+
+          </fieldset> <br>
+  
+    
+    
+    <fieldset>
+        <legend>OCCUPATION</legend>
+        <input type="checkbox" name="occupation" value="allOccupations" checked/>All Occupations        <span></span>
+        <input type="checkbox" name="occupation" value="managementOccupations" checked/>Management Occupations        <span></span>
+        <input type="checkbox" name="occupation" value="businessandFinancialOperationsOccupations" checked/>Business and Financial Operations Occupations        <br>
+        <input type="checkbox" name="occupation" value="computerandMathematicalOccupations" checked/>Computer and Mathematical Occupations        <span></span>
+        <input type="checkbox" name="occupation" value="architectureandEngineeringOccupations" checked/>Architecture and Engineering Occupations        <span></span>
+        <input type="checkbox" name="occupation" value="lifePhysicalandSocialScienceOccupations" checked/>Life, Physical, and Social Science Occupations        <br>
+        <input type="checkbox" name="occupation" value="communityandSocialServiceOccupations" checked/>Community and Social Service Occupations        <span></span>
+        <input type="checkbox" name="occupation" value="legalOccupations" checked/>Legal Occupations        <span></span>
+        <input type="checkbox" name="occupation" value="educationTrainingandLibraryOccupations" checked/>Education, Training, and Library Occupations        <br>
+        <input type="checkbox" name="occupation" value="artsDesignEntertainmentSportsandMediaOccupations" checked/>Arts, Design, Entertainment, Sports, and Media Occupations        <span></span>
+        <input type="checkbox" name="occupation" value="healthcarePractitionersandTechnicalOccupations" checked/>Healthcare Practitioners and Technical Occupations        <br>
+        <input type="checkbox" name="occupation" value="healthcareSupportOccupations" checked/>Healthcare Support Occupations         <span></span>
+        <input type="checkbox" name="occupation" value="protectiveServiceOccupations" checked/>Protective Service Occupations        <span></span>
+        <input type="checkbox" name="occupation" value="foodPreparationandServingRelatedOccupations" checked/>Food Preparation and Serving Related Occupations        <br>
+        <input type="checkbox" name="occupation" value="buildingandGroundsCleaningandMaintenanceOccupations" checked/>Building and Grounds Cleaning and Maintenance Occupations        <span></span>
+        <input type="checkbox" name="occupation" value="personalCareandServiceOccupations" checked/>Personal Care and Service Occupations        <br>
+        <input type="checkbox" name="occupation" value="salesandRelatedOccupations" checked/>Sales and Related Occupations        <span></span>
+        <input type="checkbox" name="occupation" value="officeandAdministrativeSupportoccupations" checked/>Office and Administrative Support Occupations        <span></span>
+        <input type="checkbox" name="occupation" value="farmingfishingandforestryOccupations" checked/>Farming, Fishing, and Forestry Occupations        <br>
+        <input type="checkbox" name="occupation" value="constructionandExtractionOccupations" checked/>Construction and Extraction Occupations        <span></span>
+        <input type="checkbox" name="occupation" value="installationMaintenanceandRepairOccupations" checked/>Installation, Maintenance, and Repair Occupations        <span></span>
+        <input type="checkbox" name="occupation" value="productionOccupations" checked/>Production Occupations        <br>
+        <input type="checkbox" name="occupation" value="transportationandMaterialMovingOccupations" checked/>Transportation and Material Moving Occupations        <span></span>
+        <br>
+        </fieldset> <br>
+        
+      <fieldset>
+        <legend>INCOME</legend>  
+        
+                <input type="checkbox" name="occupation" value="lessthan$10000" checked/>Less than $10,000        <span></span>
+        <input type="checkbox" name="occupation" value="10000to19999" checked/>$10,000 to $19,999        <span></span>
+        <input type="checkbox" name="occupation" value="20000to29999" checked/>$20,000 to $29,999        <span></span>
+        <input type="checkbox" name="occupation" value="30000to39999" checked/>$30,000 to $39,999        <span></span>
+        <input type="checkbox" name="occupation" value="40000to49999" checked/>$40,000 to $49,999        <span></span>
+        <input type="checkbox" name="occupation" value="50000to59999" checked/>$50,000 to $59,999        <span></span>
+        <input type="checkbox" name="occupation" value="60000to69999" checked/>$60,000 to $69,999        <span></span>
+        <input type="checkbox" name="occupation" value="70000to79999" checked/>$70,000 to $79,999        <span></span>
+        <input type="checkbox" name="occupation" value="80000to89999" checked/>$80,000 to $89,999        <span></span>
+        <input type="checkbox" name="occupation" value="90000to99999" checked/>$90,000 to $99,999        <span></span>
+        <input type="checkbox" name="occupation" value="100000to149999" checked/>$100,000 to $149,999        <span></span>
+        <input type="checkbox" name="occupation" value="150000ormore" checked/>$150,000 or more        <span></span>
+
+        
+        <br>
+       
+   </fieldset> <br>  
+    <fieldset>
+        <legend>MARITAL STATUS</legend>
+        <input type="checkbox" name="maritalStatus" value="all" checked /> All
+         <span></span>
+        <input type="checkbox" name="maritalStatus" value="single" checked />Single
+          <span></span>
+        <input type="checkbox" name="maritalStatus" value="married" checked /> Married
+     <span></span>
+        <input type="checkbox" name="maritalStatus" value="widowed" checked /> Widowed
+         <span></span>
+        <input type="checkbox" name="maritalStatus" value="divorced" checked />Divorced
+          <span></span>
+        <input type="checkbox" name="maritalStatus" value="other" checked /> Other
+         <span></span>
+        <br>
+        </fieldset> <br>
+<fieldset>
+        <legend>HOW MANY CHILDREN UNDER 18 LIVE WITH YOU</legend>
+        <input type="checkbox" name="childResidents" value="all" checked /> All
+         <span></span>
+        <input type="checkbox" name="childResidents" value="none" checked />None
+          <span></span>
+        <input type="checkbox" name="childResidents" value="1" checked /> 1
+        <span></span>
+        <input type="checkbox" name="childResidents" value="2" checked /> 2
+         <span></span>
+        <input type="checkbox" name="childResidents" value="3" checked />3
+          <span></span>
+        <input type="checkbox" name="childResidents" value="4" checked /> 4 or More
+         <span></span>
+        <br>
+        </fieldset> <br>
+    <fieldset>
+        <legend>HOW MANY KIDS OF YOUR OWN DO YOU HAVE</legend>
+        <input type="checkbox" name="kidCount" value="all" checked /> All
+         <span></span>
+        <input type="checkbox" name="kidCount" value="none" checked />None
+          <span></span>
+        <input type="checkbox" name="kidCount" value="1" checked /> 1
+        <span></span>
+        <input type="checkbox" name="kidCount" value="2" checked /> 2
+         <span></span>
+        <input type="checkbox" name="kidCount" value="3" checked />3
+          <span></span>
+        <input type="checkbox" name="kidCount" value="4" checked /> 4 or More
+         <span></span>
+        <br>
+        </fieldset> <br>
+<fieldset>
+        <legend>HOW MANY ADULTS LIVE WITH YOU</legend>
+        <input type="checkbox" name="adultResidents" value="all" checked /> All
+         <span></span>
+        <input type="checkbox" name="adultResidents" value="none" checked />None
+          <span></span>
+        <input type="checkbox" name="adultResidents" value="1" checked /> 1
+        <span></span>
+        <input type="checkbox" name="adultResidents" value="2" checked /> 2
+         <span></span>
+        <input type="checkbox" name="adultResidents" value="3" checked />3
+          <span></span>
+        <input type="checkbox" name="adultResidents" value="4" checked /> 4 or More
+         <span></span>
+        <br>
+        </fieldset> <br>
+
+<fieldset>
+        <legend>HOME OWNERSHIP</legend>
+        <input type="checkbox" name="homeOwnership" value="all" checked /> All
+         <span></span>
+        <input type="checkbox" name="homeOwnership" value="rent" checked />Rent
+          <span></span>
+        <input type="checkbox" name="homeOwnership" value="own" checked />Own
+        <span></span>
+        <input type="checkbox" name="homeOwnership" value="mortgage" checked />Currently Paying Mortgage
+         <span></span>
+        <input type="checkbox" name="homeOwnership" value="guest" checked />Guest
+          <span></span>
+        <input type="checkbox" name="homeOwnership" value="homeless" checked />Homeless
+         <span></span>
+        <br>
+        </fieldset> <br>
+
+ </fieldset> <br>
+</form>
+        
+        
+        
+<button>ADD 2nd VOTER TYPE</button><br>
+    
+    <button>ADD 3rd VOTER TYPE</button><br><br>
+    
+    
+   <button>COMPARE</button> 
+    
+
+
+</body>
+</html>
+
+
+

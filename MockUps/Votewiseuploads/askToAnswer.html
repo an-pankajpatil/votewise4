@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>Question Subcategories</title>
+<!-- This next line keeps buttons and forms at a legible size on cell phones -->
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+</head>
+<div>
+
+<style type="text/css">
+
+    .button_width{
+    width: 300px;
+    display: inline-block;
+}
+body{background-color: #ccccff}
+
+img {
+   width: 10%;
+   min-width: 30px;
+   max-width: 300px;
+} 
+ a img:hover {transform:scale(1.1);}
+ a img:active {transform:scale(1.5);}
+.votewise {width:20%; max-width:600px;}
+.local{width:23%; max-width:600px; min-width:150px}
+.subjects {
+    width:32%; max-width:200px;}
+.button_badge {/*This badge is for displaying the number of threads*/
+  background: #d00303;
+  border-radius:30%;
+  color: white;
+  padding: 1px 3px;
+  font-size: 5vmin ;
+  position: absolute; /* Position the badge within the relatively positioned button */
+  top: 0;
+  right: 20%;
+}
+.no_thread_badge{/*This badge is for if there are no threads*/
+  background-color: #3cc722;
+  border-radius:30px;
+  color: white;
+  padding: 1px 3px;
+  font-size: 3vmin;
+  position: absolute; /* Position the badge within the relatively positioned button */
+  top: 0;
+  right: 0;
+}
+
+</style>
+<body>
+<!-- This is the header -->
+<a href="index.html"><img class="votewise" src="images/votewiseTop.svg" alt="About Us"/></a>
+<a href="questionHome.html"><img src="images/questionMarkB.svg" alt="Questions"/></a>
+<a href="Learn_Home.html"><img src="images/learn.svg" alt="Learn Home"/></a>
+<a href="Debate_Home.html"><img src="images/chat.svg" alt="Debate Home"/></a>
+<a href="politiciansList.html"><img src="images/politicianB.svg" alt="Politicians"/></a>
+<a href="Advocate_Home.html"><img src="images/advocateB.svg" alt="Advocates"/></a>
+<a href="PressHome.html"><img src="images/pressB.svg" alt="Press"/></a>
+    <a href="more.html"><img src="images/expand.svg" alt="More"/></a>
+</div>
+<hr size="5" noshade>
+<!-- This is the end of the header -->
+
+
+<p><h2><center>ASK THEM TO ANSWER</center></h2></p>
+    
+    <span>You answered </span><span>15</span><span> questions in this topic</span> <br>
+    <p>You said: </p>
+    3<span> were only a little important</span><br>
+    0<span> were somewhat important</span><br>
+    11<span> were very important</span><br>
+    
+<p>Ask them to answer more questions so you can know what they are thinking.</p>
+    <form>
+    <input type="radio" name="respondents" value = "selected">Just the people I am currently comparing <br>
+<input type="radio" name="respondents" value = "category">All the people in this category (ie. Mayor, City Council...) <br>
+<input type="radio" name="respondents" value = "all">All candidates <br>
+        
+</form>
+<p>Do you want them to spend their time answering ALL the questions you answered of just the ones you considered very important?</p>
+    <form>
+    <input type="checkbox" name ="importance" value = "all">All <span> </span><span> </span>
+    <input type="checkbox" name ="importance" value = "very">Very <span> </span><span> </span>
+     <input type="checkbox" name ="importance" value = "somewhat">Somewhat <span> </span><span> </span> <input type="checkbox" name ="importance" value = "little">A Little <span> </span><span> </span>
+    </form>
+    <center><a href="NotBuiltYet.html"><img src="images/submit.svg" alt="Submit" class="local"></a> </center> 
+</html>
+
+

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<head>
+<title>Politician List</title>
+<!-- This next line keeps buttons and forms at a legible size on cell phones -->
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+<div>
+
+
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+<!-- CSS styles for standard search box -->
+<style type="text/css">
+	#tfheader{
+		background-color:ccccff;
+	}
+	#tfnewsearch{
+		float:right;
+		padding-right:20px;
+        padding-bottom: 0px;
+        display:inline-block;
+	}
+	.tftextinput{
+		margin: 0;
+		padding: 5px 15px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+		border:1px solid #0076a3; border-right:0px;
+		border-top-left-radius: 5px 5px;
+		border-bottom-left-radius: 5px 5px;
+        display:inline-block;
+	}
+	.tfbutton {
+		margin: 0;
+		padding: 5px 15px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+		outline: none;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+		color: #ffffff;
+		border: solid 1px #0076a3; border-right:0px;
+		background: #ccccff;
+		background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+		background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+		border-top-right-radius: 5px 5px;
+		border-bottom-right-radius: 5px 5px;
+        display:inline-block;
+	}
+	.tfbutton:hover {
+		text-decoration: none;
+		background: #007ead;
+		background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+		background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+	}
+	/* Fixes submit button height problem in Firefox */
+	.tfbutton::-moz-focus-inner {
+	  border: 0;
+	}
+	.tfclear{
+		clear:both;
+	}
+  
+    
+    .searchbox{max-width: 500px;
+    display:inline-block; margin-top:10px;
+        }
+        
+</style>
+
+
+
+
+<style type="text/css">
+
+body{background-color: #ccccff}
+
+img {
+   width: 10%;
+   min-width: 30px;
+   max-width: 300px;
+} 
+ a img:hover {transform:scale(1.1);}
+ a img:active {transform:scale(1.5);}
+.votewise {width:20%; max-width:600px;}
+.local{width:23%; max-width:600px; min-width:150px}
+.subjects {
+    width:32%; max-width:200px;}
+.usertype {width:1px;}
+ .tablehead {width:100px;}
+.boxed {border:1px solid black;
+        background-color:#e0dfdf;width:30%;float:left;padding-left:10px;border-radius:10px;margin:10px; margin-top: 0px;}
+.inline {float:left;}
+    .inline2 {float:left;margin-bottom:10px;}
+  .geobox{max-width: 400px;
+    display:inline-block;position:relative;
+        bottom:20;margin-right:15px;margin-top:10px;
+    }
+/* Alternating dark light table */
+    
+table th	{
+    background-color: #787ec1;
+    color: white;
+}table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+	
+}
+table tr:nth-child(even) {
+    background-color: #eee;
+}
+table tr:nth-child(odd) {
+   background-color:#fff;
+}
+    
+</style>
+    </head>
+    
+    
+   <body> 
+    
+    
+<!-- This is the header -->
+<a href="index.html"><img class="votewise" src="images/votewiseTop.svg" alt="About Us"/></a>
+<a href="questionHome.html"><img src="images/questionMarkB.svg" alt="Questions"/></a>
+<a href="Learn_Home.html"><img src="images/learn.svg" alt="Learn Home"/></a>
+<a href="Debate_Home.html"><img src="images/chat.svg" alt="Debate Home"/></a>
+<a href="politiciansList.html"><img src="images/politicianB.svg" alt="Politicians"/></a>
+<a href="Advocate_Home.html"><img src="images/advocateB.svg" alt="Advocates"/></a>
+<a href="PressHome.html"><img src="images/pressB.svg" alt="Press"/></a>
+    <a href="more.html"><img src="images/expand.svg" alt="More"/></a>
+</div>
+<hr size="5" noshade>
+<!-- This is the end of the header -->
+    
+    
+    
+    
+<div class="geobox">
+<p>User Forum</p>
+    </div>
+
+    <p><h2><center>CIVIL LIBERTIES</center></h2></p>
+    
+<!-- Geo Proximity tab -->    
+<div class="geobox">
+<form action=""><fieldset>
+    <legend>Choose</legend>
+    <input type="radio" name="geographic-focus" value="national" checked /> National
+    <input type="radio" name="geographic-focus" value="state"> State
+    <input type="radio" name="geographic-focus" value="county"> County
+    <input type="radio" name="geographic-focus" value="local"> Local<br>
+    </fieldset>
+</form>
+    </div>
+  <div class="geobox">
+    <form>
+        
+<!-- Subject Selection drop down-->
+Skip to: <br>
+<select name="SUBJECT">
+  <option value="CivilLiberties">Civil Liberties</option>
+  <option value="Crime">Crime and Punishment</option>
+  <option value="Education">Education</option>
+  <option value="Energy">Energy</option>
+  <option value="Environment">Environment</option>
+  <option value="Gun">Gun Control</option>
+  <option value="Health">Health and Safety</option>
+  <option value="Immigration">Immigration</option>
+  <option value="Infrastructure">Infrastructure</option>
+  <option value="International">International Relations</option>
+  <option value="Jobs">Jobs and the Economy</option>
+  <option value="Quality">Quality of Life</option>
+  <option value="Reproduction">Reproduction</option>
+  <option value="Social">Social Services</option>
+  <option value="Taxes">Taxes</option>
+  <option class="select-dash" disabled="disabled">----</option>
+    <option value="Conspiracy">Conspiracy Corner</option>
+</select>
+    </form>
+    </div>
+<button class="geobox">Change Location</button>
+    <!-- HTML for SEARCH BAR -->
+	<div id="tfheader" class="searchbox">
+		<form id="tfnewsearch" method="get" action="http://www.google.com">
+		        <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="Forum Search" class="tfbutton">
+		</form>
+	<div class="tfclear"></div>
+	</div>
+	<br><br>
+
+
+<div class="inline2">
+<form >
+   <table style="width:100%">
+  <tr>
+    <th>Forum</th>
+    <th>Latest Post</th>
+      <th><image src="images/ideas4big.svg" class="tablehead"><br>Brain Storming</image></th>
+      <th><image src="images/peace.svg" class="tablehead"></image><br>Solutions</th>
+    <th> Total Threads</th>
+    <th>Total Posts</th>
+  </tr>
+  <tr>
+    <td><a href ="ForumThreadList.html">Privacy</a> </td>
+      <td><a href="ForumThread.html"><image src="images/ideas4small.svg" class="usertype"></image>Re:Government reading email </a><br><img src="images/VOTERbutton.svg" class="usertype">by <a href="user/link/">Frank187</a><br>Fri, Jul 20, 2016,8:05pm</td>
+      <td><a href="forum/link/">27</a></td>
+      <td><a href="forum/link/">2</a></td>
+    <td>29 </td>
+    <td> 340</td>
+     
+  </tr>
+  <tr>
+      <td><a href ="ForumThreadList.html">Marriage</a> </td>
+      <td><a href="ForumThread.html"> <image src="images/ideas4small.svg" class="usertype"></image>Commonlaw marriage</a><br><img src="images/VOTERbutton.svg" class="usertype">by <a href="forum/link/">  CaptainHeadlock</a><br>Fri, Jul 19, 2016,10:45pm</td>
+      <td><a href="forum/link/">11</a></td>
+      <td><a href="forum/link/">0</a></td>
+      <td>11 </td>
+    <td> 75</td>
+  </tr>
+   <tr>
+       <td><a href ="ForumThreadList.html">Racial Profiling</a></td>
+       <td><a href="ForumThread.html"><image src="images/peace.svg" class="usertype"></image>Re:Cops need to stop beating...</a><br><img src="images/politicianB.svg" class="usertype">by <a href="user/link/">Eldrich Adams</a><br>Fri, Jul 20, 2016,11:20pm</td>
+       <td><a href="forum/link/">149</a></td>
+       <td><a href="forum/link/">7</a></td>
+       <td>156</td>
+    <td> 2300</td>
+
+<tr>
+    <td><a href ="ForumThreadList.html">Voting </a></td>
+    <td><a href="ForumThread.html"><image src="images/ideas4small.svg" class="usertype"></image>Re:Why can't our votes be cou...</a><br><img src="images/pressB.svg" class="usertype">by <a href="user/link/">SuzanYankee</a><br>Fri, Jul 20, 2016,11:17pm</td>
+    <td><a href="forum/link/">28</a></td>
+    <td><a href="forum/link/">1</a></td>
+    <td>29 </td>
+    <td> 340</td>
+  </tr>
+   <tr>
+       <td><a href ="ForumThreadList.html">Other </a></td>
+       <td><a href="ForumThread.html"><image src="images/ideas4small.svg" class="usertype"></image>Re:They really need to legalize...</a><br><img src="images/VOTERbutton.svg" class="usertype">by <a href="user/link/"> YinglingBro</a><br>Fri, Jul 20, 2016,8:05pm</td>
+       <td><a href="forum/link/">12</a></td>
+       <td><a href="forum/link/">0</a></td>
+    <td>12</td>
+    <td> 80</td>
+   
+  </tr>
+ </table> 
+    </div>
+<div class="boxed">
+    <center><h2>My Discussions</h2></center>
+   <p> <a href="ForumThread.html">Dogs on leashes</a><br>
+    <a href="ForumThread.html">Kids on leashes</a><br>
+    <a href="ForumThread.html">Clowns too scary</a><br>
+    <a href="ForumThread.html">Leeches on leashes</a><br></p>
+    </div>
+<div class="boxed">
+    <center><h2>Active Threads</h2></center>
+    <p> <a href="ForumThread.html">Children with guns</a><br>
+    <a href="ForumThread.html">Insurance and birth control</a><br>
+    <a href="ForumThread.html">Mass shooting in Florida</a><br>
+    <a href="ForumThread.html">Waiting list</a><br>
+    <a href="ForumThread.html">Healthcare should be free </a><br>
+    <a href="ForumThread.html">We need to get the government out of healthdare</a><br>
+    <a href="ForumThread.html">Are we really sick or are there just a lot of hypochonrdiacs?</a><br>
+    <a href="ForumThread.html">Where can I go to get my hypochondria treated?</a><br></p>
+    </div>
+<div class="boxed">
+    <center><h2>Hottest Threads</h2></center>
+    <p> <a href="ForumThread.html">Voting Irregularities</a><br>
+    <a href="ForumThread.html">Cops out of control</a><br>
+    <a href="ForumThread.html">Biance running for Congress</a><br>
+    <a href="ForumThread.html">I can't find my voting place</a><br>
+    <a href="ForumThread.html">Hospital bills </a><br>
+    <a href="ForumThread.html">Finance reform</a><br>
+    <a href="ForumThread.html">Corruption in finance office</a><br>
+    <a href="ForumThread.html">Term limits</a><br></p>
+    </div>
+<div class="boxed">
+    <center><h2>Local Threads</h2></center>
+    <p> <a href="ForumThread.html">Leaches are attacking main st.</a><br>
+    <a href="ForumThread.html">Cops out of control</a><br>
+    <a href="ForumThread.html">Restore Anderson Park</a><br>
+    <a href="ForumThread.html">Noise Ordinances</a><br>
+    <a href="ForumThread.html">Parking </a><br>
+    <a href="ForumThread.html">Pot Holes on Gerald Square</a><br>
+    <a href="ForumThread.html">Waterline repairs</a><br>
+    <a href="ForumThread.html">Taxes to high</a><br></p>
+    </div>
+</html>
+    
+
+
+

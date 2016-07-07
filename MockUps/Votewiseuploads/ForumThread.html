@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<head>
+<title>Politician List</title>
+<!-- This next line keeps buttons and forms at a legible size on cell phones -->
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+<div>
+
+
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+<!-- CSS styles for standard search box -->
+<style type="text/css">
+	#tfheader{
+		background-color:ccccff;
+	}
+	#tfnewsearch{
+		float:right;
+		padding-right:20px;
+        padding-bottom: 0px;
+        display:inline-block;
+	}
+	.tftextinput{
+		margin: 0;
+		padding: 5px 15px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+		border:1px solid #0076a3; border-right:0px;
+		border-top-left-radius: 5px 5px;
+		border-bottom-left-radius: 5px 5px;
+        display:inline-block;
+	}
+	.tfbutton {
+		margin: 0;
+		padding: 5px 15px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+		outline: none;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+		color: #ffffff;
+		border: solid 1px #0076a3; border-right:0px;
+		background: #ccccff;
+		background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+		background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+		border-top-right-radius: 5px 5px;
+		border-bottom-right-radius: 5px 5px;
+        display:inline-block;
+	}
+	.tfbutton:hover {
+		text-decoration: none;
+		background: #007ead;
+		background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+		background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+	}
+	/* Fixes submit button height problem in Firefox */
+	.tfbutton::-moz-focus-inner {
+	  border: 0;
+	}
+	.tfclear{
+		clear:both;
+	}
+  
+    
+    .searchbox{max-width: 500px;
+    display:inline-block; margin-top:10px;
+        }
+        
+</style>
+
+
+
+
+<style type="text/css">
+
+body{background-color: #ccccff}
+
+img {
+   width: 10%;
+   min-width: 30px;
+   max-width: 300px;
+} 
+ a img:hover {transform:scale(1.1);}
+ a img:active {transform:scale(1.5);}
+.votewise {width:20%; max-width:600px;}
+.local{width:23%; max-width:600px; min-width:150px}
+.subjects {
+    width:32%; max-width:200px;}
+.usertype {width:30px;}
+ .tablehead {width:100px;}
+.boxed {border:1px solid black;
+        background-color:#e0dfdf;width:30%;float:left;padding-left:10px;border-radius:10px;margin:10px; margin-top: 0px;}
+.inline {float:left;}
+    .inline2 {float:left;margin-bottom:10px;}
+  .geobox{max-width: 400px;
+    display:inline-block;position:relative;
+        bottom:20;margin-right:15px;margin-top:10px;
+    }
+.boldbox {font-weight: bold}
+.tabletools {margin-left:30px; width:30px; height:30px;}
+    
+/* Alternating dark light table */
+    
+table th	{
+    background-color: #787ec1;
+    color: white;
+}table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+	
+}
+table tr:nth-child(even) {
+    background-color: #eee;
+}
+table tr:nth-child(odd) {
+   background-color:#fff;
+}
+    
+</style>
+    </head>
+    
+    
+   <body> 
+    
+    
+<!-- This is the header -->
+<a href="index.html"><img class="votewise" src="images/votewiseTop.svg" alt="About Us"/></a>
+<a href="questionHome.html"><img src="images/questionMarkB.svg" alt="Questions"/></a>
+<a href="Learn_Home.html"><img src="images/learn.svg" alt="Learn Home"/></a>
+<a href="Debate_Home.html"><img src="images/chat.svg" alt="Debate Home"/></a>
+<a href="politiciansList.html"><img src="images/politicianB.svg" alt="Politicians"/></a>
+<a href="Advocate_Home.html"><img src="images/advocateB.svg" alt="Advocates"/></a>
+<a href="PressHome.html"><img src="images/pressB.svg" alt="Press"/></a>
+    <a href="more.html"><img src="images/expand.svg" alt="More"/></a>
+</div>
+<hr size="5" noshade>
+<!-- This is the end of the header -->
+    
+    
+    
+    
+<div >
+<p>Forum>Civil Liberties>Privacy</p>
+    </div>
+    <img src="images/ideas.svg" class="subjects inline">
+    This is a brainstorming forum.  Use this forum to express your ideas, ask questions, brainstorm, learn about issues, talk with people from your community and all over.  If you and a bunch of others work something out and think you have a solution to a problem that you want to present people, then you can hit the "propose as a solution button" and if enough people on this forum agree that it should be promoted, then it will go on to the Solution Forum, where further discussion is highly regulated. 
+    <p><h2><center>PRIVACY</center></h2></p>
+    
+<!-- Geo Proximity tab -->    
+<div class="geobox">
+<form action=""><fieldset>
+    <legend>Choose</legend>
+    <input type="radio" name="geographic-focus" value="national" checked /> National
+    <input type="radio" name="geographic-focus" value="state"> State
+    <input type="radio" name="geographic-focus" value="county"> County
+    <input type="radio" name="geographic-focus" value="local"> Local<br>
+    </fieldset>
+</form>
+    </div>
+  <div class="geobox">
+    <form>
+        
+<!-- Subject Selection drop down-->
+Skip to: <br>
+<select name="SUBJECT">
+  <option value="CivilLiberties">Civil Liberties</option>
+  <option value="Crime">Crime and Punishment</option>
+  <option value="Education">Education</option>
+  <option value="Energy">Energy</option>
+  <option value="Environment">Environment</option>
+  <option value="Gun">Gun Control</option>
+  <option value="Health">Health and Safety</option>
+  <option value="Immigration">Immigration</option>
+  <option value="Infrastructure">Infrastructure</option>
+  <option value="International">International Relations</option>
+  <option value="Jobs">Jobs and the Economy</option>
+  <option value="Quality">Quality of Life</option>
+  <option value="Reproduction">Reproduction</option>
+  <option value="Social">Social Services</option>
+  <option value="Taxes">Taxes</option>
+  <option class="select-dash" disabled="disabled">----</option>
+    <option value="Conspiracy">Conspiracy Corner</option>
+</select>
+    </form>
+    </div>
+<button class="geobox">Change Location</button>
+    <!-- HTML for SEARCH BAR -->
+	<div id="tfheader" class="searchbox">
+		<form id="tfnewsearch" method="get" action="http://www.google.com">
+		        <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="Forum Search" class="tfbutton">
+		</form>
+	<div class="tfclear"></div>
+	</div>
+	<br><br>
+
+<form>
+
+
+
+<div class="inline2">
+<form >
+   <table style="width:100%">
+  <tr>
+    <th colspan="2">Friday July 22, 2016 10:45pm</th>
+      </tr>
+  <tr>
+      <td rowspan="3" width="200"><img src="images/VOTERbutton.svg" class="usertype"><br><a href="PublicProfile.html"> John Speedway </a><br>Joined Forum on Feb 2, 2016   <br> Posts <a href="PublicProfile.html">150 </a> <br> Quality Points  34 </td>
+     
+    <td class="boldbox"> Should the Government be allowed to read our emails?</td>
+    </tr>
+  <tr>
+    
+      <td>Should the Government be allowed to read our emails?  On the one hand, I really don't want the government looking at the pictures that my girlfriend sends me.  On the otherhand, if they can stop terrorists from blowing up a bus or something, maybe it's worth it.  What do you guys think?<br> <img src="images/thumbsup.svg" class="tabletools" alt="Like">17 <img src="images/thumbsdown.svg"class="tabletools" alt="Dislike"> <img src="images/abuse.svg" class="tabletools" alt="Report Spam"> (Spam) 0 
+      <img src="images/share.svg" class="tabletools" alt="share">
+      <img src="images/peace.svg" class="tabletools" alt="Propose Solution">
+    <img src="images/expand.svg" class="tabletools" alt="more">
+      
+  
+     
+  </tr>
+       
+    </table>
+    
+    
+    <table style="width:100%">
+  <tr>
+    <th colspan="2" >Friday July 22, 2016 11:00pm</th>
+      </tr>
+  <tr>
+      <td rowspan="3" width="200"><img src="images/VOTERbutton.svg" class="usertype"><br><a href="PublicProfile.html"> PeterMountain345</a> <br>Joined Forum on Feb 2, 2016   <br> Posts <a href="forum/link/">10  <br> Quality Points  3 </td>
+     
+    <td class="boldbox">RE: Should the Government be allowed to read our emails?</td>
+    </tr>
+  <tr>
+    
+      <td>They can probably set up a computer to watch for key word or phrases.</td>
+  
+     
+  </tr>
+    
+    </table>
+    
+    <table style="width:100%">
+  <tr>
+    <th colspan="2" >Friday July 22, 2016 11:01pm</th>
+      </tr>
+  <tr>
+      <td rowspan="3" width="200"><img src="images/VOTERbutton.svg" class="usertype"><br><a href="PublicProfile.html"> ScreamingTree </a><br>Joined Forum on Jan 2, 2016   <br> Posts <a href="forum/link/">1500 </a> <br> Quality Points  50 </td>
+     
+    <td class="boldbox">RE: Should the Government be allowed to read our emails?</td>
+    </tr>
+  <tr>
+    
+      <td>It's an invitation to abuse.  If a terrorist organization was trying to avoid a device that looked for keywords like "bomb", they could just use code.  Like using "baby" instead of "bomb".  So you won't catch them, but you will get people who are overzealous in doing their job - or just pervy - who will overstep their bounds and look at your pics, read your love letters... who knows what else?</td>
+  
+     
+  </tr>
+    
+    </table>
+        <table style="width:100%">
+  <tr>
+    <th colspan="2" >Friday July 22, 2016 11:04pm</th>
+      </tr>
+  <tr>
+      <td rowspan="3" width="200"><img src="images/politicianB.svg" class="usertype"><br><a href="PublicProfile.html"> Henry Thomson </a><br>Mayor Candidate<br>Rockland Township<br>Joined Forum on Jan 2, 2016   <br> Posts <a href="forum/link/">1500 </a> <br> Quality Points  50 </td>
+     
+    <td class="boldbox">RE: Should the Government be allowed to read our emails?</td>
+    </tr>
+  <tr>
+    
+      <td>I think we need to give the authorities the tools to catch the bad guys.  We can't tie their hands behind their backs.  How about we store all the emails and only look at them when they get a court order.  So no one would be looking at your girlfriend or whatever until we find out that you're friends with a terrorist.</td>
+  
+     
+  </tr>
+    
+    </table>
+            <table style="width:100%">
+  <tr>
+    <th colspan="2" >Friday July 22, 2016 11:06pm</th>
+      </tr>
+  <tr>
+      <td rowspan="3" width="200"><img src="images/advocateB.svg" class="usertype"><br><a href="PublicProfile.html"> American Privacy First</a><br>Joined Forum on Jan 2, 2016   <br> Posts <a href="forum/link/">1500 </a> <br> Quality Points  50 </td>
+     
+    <td class="boldbox">RE: Should the Government be allowed to read our emails?</td>
+    </tr>
+  <tr>
+    
+      <td>Right now, all our email and other information is spread out amongst millions of servers all over the world.  If you put that all in one place, then it's just a huge invitation for hackers. </td>
+  
+     
+  </tr>
+    
+    </table>
+                <table style="width:100%">
+  <tr>
+    <th colspan="2" >Friday July 22, 2016 11:06pm</th>
+      </tr>
+  <tr>
+      <td rowspan="3" width="200"><img src="images/pressB.svg" class="usertype"><br><a href="PublicProfile.html"> John Spillway</a><br><a href="PublicProfile.html">Today's Gazette </a><br>Joined Forum on Jan 2, 2016   <br> Posts <a href="forum/link/">1500 </a> <br> Quality Points  50 </td>
+     
+    <td class="boldbox">RE: Should the Government be allowed to read our emails?</td>
+    </tr>
+  <tr>
+    
+      <td>We wrote a thing about hackers awhile ago.  You should take a look at the link here.  <a href="forum/link/">Hackers vs Firewalls: A race against time </a> </td>
+  
+   
+  </tr>
+    
+    </table>
+    <center> <button>REPLY</button></center> 
+</html>
+    
+
+
+
