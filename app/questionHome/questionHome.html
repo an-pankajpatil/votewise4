@@ -29,6 +29,7 @@ width:32%; max-width:200px;}
  <p>Tell your politicians what they should do and get matched up with candidates and interest groups that can help you make the world a better place.</p>
 
 <!-- This is the Start of the subject images -->
+<!--
 <a href="NotBuiltYet.html"> <img src="assets/images/civil_liberties.svg" class="subjects" alt="Civil Liberties"/></a>
 <a href="NotBuiltYet.html"> <img src="assets/images/crime_punishment.svg"class="subjects" alt="Crime and Punishment"/></a>
 <a href="NotBuiltYet.html"><img src="assets/images/education.svg"class="subjects" alt="Education"/></a>
@@ -46,5 +47,11 @@ width:32%; max-width:200px;}
 <a href="NotBuiltYet.html"><img src="assets/images/social_services.svg" class="subjects" alt="Social Services"/></a>
 <a href="NotBuiltYet.html"><img src="assets/images/rate_topics.svg" class="subjects" alt="Rate the Subjects"/></a>
 <a href="NotBuiltYet.html"><img src="assets/images/local.svg" class="subjects" alt="Local Subjects"/></a>
+-->
+
+<a ng-repeat="item in categories" href="NotBuiltYet.html" title="{{item.title}}" style="padding: 10px;">
+	<!-- <img src="assets/images/local.svg" class="subjects" alt="{{item.title}}"/> -->
+	{{item.title}}
+</a>
 
 <!-- This is the end of the subject images -->

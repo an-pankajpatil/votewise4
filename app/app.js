@@ -63,7 +63,7 @@ mainApp.factory('apiService', function() {
   factory.apiCall = (verb, url, data, headers) => {
     console.log(verb, url, data, headers);
     const root = 'http://localhost:8080';
-    return {
+     var obj = {
       method: verb,
       url: root + url,
       headers: {'Content-Type': 'application/x-www-form-urlencoded'},
@@ -74,7 +74,16 @@ mainApp.factory('apiService', function() {
         return str.join("&");
       },
       data: data
+    };
+
+    if(verb.toLowerCase() == "get"){
+      obj.params = data;
     }
+    else{
+      obj.data = data; 
+    }
+
+    return obj;
   }
 
   return factory;
