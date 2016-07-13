@@ -9,6 +9,8 @@ const mainApp = angular.module('myApp', [
   'myApp.advocateSignup',
   'myApp.version',
   'myApp.questionHome',
+  'myApp.questionSubcategories',
+  'myApp.question',
   'myApp.debateHome',
   'myApp.localDebate',
   'myApp.learnHome',
@@ -16,7 +18,6 @@ const mainApp = angular.module('myApp', [
   'myApp.localPress',
   'myApp.advocateHome'
 ]);
-
 mainApp.config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
   function checkUser() {
@@ -90,7 +91,6 @@ mainApp.factory('apiService', function() {
 });
 
 mainApp.service('apiCall', function(apiService){
-
   this.apiCall = (verb, url, data, headers) => {
     return apiService.apiCall(verb, url, data, headers);
   }
@@ -106,5 +106,4 @@ mainApp.service('apiCall', function(apiService){
   this.destroyToken = () => {
     return apiService.destroyToken();
   }
-
 });

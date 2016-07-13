@@ -1,0 +1,354 @@
+
+<head>
+<title>Question</title>
+<!-- This next line keeps buttons and forms at a legible size on cell phones -->
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="question/question.css">
+</head>
+
+<body>
+  <style type="text/css">
+    .button_width{
+      width: 300px;
+      display: inline-block;
+    }
+    .leftJustified {text-align: left;}
+    .rightJustified {text-align: right;}
+    body{background-color: #ccccff}
+
+    table {
+      width: 100%;
+    }
+
+    img {
+      width: 10%;
+      min-width: 10px;
+      max-width: 300px;
+    } 
+    a img:hover, .arrow-left-wrapper:hover, .arrow-right-wrapper:hover {
+      transform:scale(1.1);
+    }
+    a img:active, .arrow-left-wrapper:active, .arrow-right-wrapper:active {transform:scale(1.5);}
+    .votewise {width:20%; max-width:600px;}
+    .local{width:23%; max-width:600px; min-width:150px}
+    .subjects {
+      width:32%;
+      max-width:200px;
+    }
+    .submit {width:100%;}
+    .back {width:60%;}
+
+    .cap_first::first-letter { 
+      font-size: 120%;
+    }
+
+    .round-button{
+      padding: 5px;
+      border: 2px solid #000;
+      border-radius: 5px;
+      background-color: #aeaef8;
+      color: #000;
+      font-weight: bold;
+      font-size: 12px;
+      text-align: center;
+      min-width: 140px;
+    }
+    .pull-left{
+      float: left;
+    }
+    .pull-right{
+      float: right;
+    }
+    .pad10{
+      padding: 10px;
+    }
+
+    .arrow-left-wrapper{
+      position: relative;
+      width: 150px;
+      height: 80px;
+      float: left;
+    }
+    .arrow-right-wrapper{
+      position: relative;
+      width: 150px;
+      height: 80px;
+      float: right; 
+    }
+    .arrow-left{
+      width: 0;
+      height: 0;
+      border-top: 40px solid transparent;
+      border-bottom: 40px solid transparent;
+      border-right: 150px solid #2e3192;
+      color: #fff;
+      line-height: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    .arrow-right{
+      width: 0;
+      height: 0;
+      border-top: 40px solid transparent;
+      border-bottom: 40px solid transparent;
+      border-left: 150px solid #2e3192;
+      color: #fff;
+      line-height: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+    .arrow-right-txt{
+      position: absolute;
+      line-height: 80px;
+      text-align: left;
+      width: 140px;
+      padding-left: 10px;
+      color: #fff;
+      z-index: 2;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .arrow-left-txt{
+      position: absolute;
+      line-height: 80px;
+      text-align: right;
+      width: 140px;
+      padding-right: 10px;
+      color: #fff;
+      z-index: 2;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .clk{
+      cursor: pointer;
+    }
+    .rel{
+      position: relative;
+    }
+    .abs{
+      position: absolute;
+    }
+
+    .w33_33{
+      width: 33.33%;
+    }
+  </style>
+
+  <p>{{category.title}}</p>
+  <p></p><center><h2>BACKGROUND</h2></center><p></p>
+  <p>{{category.description}}</p>
+  <br>
+
+  <div ng-if="questions[currentIndex]"> 
+    <!-- <type="button" value="LEARN MORE"> -->
+    <p></p><center><h2>QUESTION</h2></center><p></p>
+    <p></p><center>({{currentIndex+1}} of {{questions.length}})</center><p></p>
+
+    <p>STATEMENT: {{questions[currentIndex].content}}</p>
+
+    <p></p><center>AGREE OR DISAGREE</center><p></p>
+  
+    <table>
+      <tbody>
+        <tr>
+          <th colspan="2" class="leftJustified cap_first">AGREE</th>
+          <th colspan="2">
+            <center><div class="arrow-down"></div></center>
+          </th>
+          <th colspan="2" class="rightJustified cap_first">DISAGREE</th>
+        </tr>
+    
+        <tr class="hori-line">
+          <td>
+            <ul class="vi-radio pull-left">
+              <li>
+                <input type="radio" id="agreedisagree-id1" name="agreeDisagree" value="1">
+                <label for="agreedisagree-id1"></label>
+                <div class="check"></div>
+              </li>
+            </ul>
+          </td>
+          <td>
+            <center>
+              <ul class="vi-radio">
+                <li>
+                  <input type="radio" id="agreedisagree-id2" name="agreeDisagree" value="2">
+                  <label for="agreedisagree-id2"></label>
+                  <div class="check"></div>
+                </li>
+              </ul>
+            </center>
+          </td>
+          <td>
+            <center>
+              <ul class="vi-radio">
+                <li>
+                  <input type="radio" id="agreedisagree-id3" name="agreeDisagree" value="3">
+                  <label for="agreedisagree-id3"></label>
+                  <div class="check"></div>
+                </li>
+              </ul>
+            </center>
+          </td>
+          <td>
+            <center>
+              <ul class="vi-radio">
+                <li>
+                  <input type="radio" id="agreedisagree-id4" name="agreeDisagree" value="4">
+                  <label for="agreedisagree-id4"></label>
+                  <div class="check red"></div>
+                </li>
+              </ul>
+            </center>
+          </td>
+          <td>
+            <center>
+              <ul class="vi-radio">
+                <li>
+                  <input type="radio" id="agreedisagree-id5" name="agreeDisagree" value="5">
+                  <label for="agreedisagree-id5"></label>
+                  <div class="check red"></div>
+                </li>
+              </ul>
+            </center></td>
+          <td>
+              <ul class="vi-radio pull-right">
+                <li>
+                  <input type="radio" id="agreedisagree-id6" name="agreeDisagree" value="6">
+                  <label for="agreedisagree-id6"></label>
+                  <div class="check red"></div>
+                </li>
+              </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <center>
+      <input type="radio" name="agreeDisagree" ng-model="answer" value="0"> This question is not answerable
+    </center>
+
+
+    <p></p><center>IMPORTANCE</center><p></p>
+
+    <div class="clearfix">
+      <table>
+        <tbody>
+          <tr>
+            <th colspan="1" class="leftJustified cap_first">SOMEWHAT</th>
+            <th colspan="1" class="leftJustified"></th>
+            <th colspan="1" class="rightJustified cap_first">VERY</th>
+          </tr>
+          <tr>
+            <td class="w33_33">
+              <ul class="vi-radio pull-left">
+                <li>
+                  <input type="radio" id="importance-id1" name="importance" value="1">
+                  <label for="importance-id1"></label>
+                  <div class="check"></div>
+                </li>
+              </ul>
+            </td>
+            <td class="w33_33">
+              <center>
+                <ul class="vi-radio">
+                  <li>
+                    <input type="radio" id="importance-id2" name="importance" value="2">
+                    <label for="importance-id2"></label>
+                    <div class="check"></div>
+                  </li>
+                </ul>
+              </center>
+            </td>
+            <td class="w33_33">
+              <ul class="vi-radio pull-right">
+                <li>
+                  <input type="radio" id="importance-id3" name="importance" value="3">
+                  <label for="importance-id3"></label>
+                  <div class="check"></div>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    <br>
+
+    <center> 
+      <input type="button" name="addComments" value="Add Comments" center="">
+    </center>
+  </div>
+  <!--
+  <div>
+    <br>
+    <br>
+
+    <table>
+      <tbody>
+        <tr>
+          <th>
+            <center>
+              <a href="NotBuiltYet.html">
+                <img src="assets/images/back3.svg" alt="Back" class="back">
+              </a>
+            </center>
+          </th>
+          <th>
+            <center>
+              <a href="compare.html">
+                <img src="assets/images/submit.svg" alt="Submit" class="submit">
+              </a>
+            </center>
+          </th>
+          <th>
+            <center>
+              <a href="NotBuiltYet.html">
+                <img src="assets/images/skip3.svg" alt="Skip" class="back">
+              </a>
+            </center>
+          </th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  -->
+
+  <div ng-show="questions.length > 0" class="clearfix pad10">
+    <div class="clearfix">
+      <div class="arrow-left-wrapper clk" ng-click="prevQuestion()">
+        <div class="arrow-left-txt cap_first">
+          BACK
+        </div>
+        <div class="arrow-left"></div>
+      </div>
+
+      <div class="arrow-right-wrapper clk" ng-click="submitAnswer()">
+        <div class="arrow-right-txt cap_first">
+          SUBMIT
+        </div>
+        <div class="arrow-right"></div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="clearfix">
+      <div class="round-button pull-left clk">REPORT QUESTION</div>
+      <div class="round-button pull-right clk" ng-click="skipQuestion()">SKIP QUESTION</div>
+    </div>
+  </div>
+
+  <div ng-if="questions.length == 0">
+    No questions found in this category.
+  </div>
+
+</body>

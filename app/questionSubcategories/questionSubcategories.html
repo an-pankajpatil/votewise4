@@ -1,0 +1,73 @@
+<head>
+<title>Question Subcategories</title>
+<!-- This next line keeps buttons and forms at a legible size on cell phones -->
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+</head>
+<body>
+
+<style type="text/css">
+  .button_width{
+    width: 300px;
+    display: inline-block;
+  }
+  body{
+    background-color: #ccccff;
+  }
+
+  img {
+     width: 10%;
+     min-width: 30px;
+     max-width: 300px;
+  } 
+   a img:hover {transform:scale(1.1);}
+   a img:active {transform:scale(1.5);}
+  .votewise {width:20%; max-width:600px;}
+  .local{width:23%; max-width:600px; min-width:150px}
+  .subjects {
+    width:32%;
+    max-width:200px;
+  }
+
+  .mb20{
+    margin-bottom: 20px;
+  }
+</style>
+
+
+<p></p>
+<h1><center>{{category.title}}</center></h1>
+<p></p>
+<p></p><center>Choose a subcategory</center><p></p>
+
+<form lpformnum="1">
+  <center>
+    
+    <input type="button" class="button_width" value="Most Popular">
+    <br><br>
+
+    <div class="mb20" ng-repeat="item in subCategories">
+      <a href="#!/question/{{item._id}}">
+        <input type="button" class="button_width" value="{{item.title}}">
+      </a>
+    </div>
+
+    <!--
+    <br><br>
+
+    <a href="Question.html"><input type="button" class="button_width" value="Privacy"></a>
+    <br><br>
+
+    <a href="Question.html"><input type="button" class="button_width" value="Marriage"></a> <br><br>
+
+    <a href="Question.html"><input type="button" class="button_width" value="Racial Profiling"></a> <br><br>
+
+    <a href="Question.html"><input type="button" class="button_width" value="Voting"></a> <br><br>
+
+    <a href="Question.html"><input type="button" class="button_width" value="LGBT Issues"></a> <br><br>
+
+    <img src="assets/images/pressB.svg" alt="Press"><br>
+    <a href="PressQuestions.html"><input type="button" class="button_width" value="Questions from the Press"></a> <br>
+    -->
+  </center>
+
+</form>
