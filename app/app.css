@@ -51,3 +51,23 @@ a {
   width:32%;
   max-width:200px;
 }
+
+
+/* global css */
+.flex {
+  display: flex;
+  display: -ms-flexbox;
+}
+.margin-auto{
+  margin: auto;
+}
+
+.pull-left{
+  float: left;
+}
+.pull-right{
+  float: right;
+}
+.pad10{
+  padding: 10px;
+}
